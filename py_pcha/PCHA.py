@@ -19,7 +19,7 @@ def PCHA(X, noc, I=None, U=None, delta=0, verbose=False, conv_crit=1E-6, maxiter
     Parameters
     ----------
     X : numpy.2darray
-        Data matrix in which to find archetypes.
+        Data matrix in which to find archetypes
 
     noc : int
         Number of archetypes to find
