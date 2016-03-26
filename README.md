@@ -14,11 +14,11 @@ Matlab implementation by: Morten Mørup.
 Python implementation by: Ulf Aslak Jensen.
 
 ## Install:
-
+Install with pip or easy_install
 ```
-pip install py_pcha
+$ pip install py_pcha
 # or
-easy_install py_pcha
+$ easy_install py_pcha
 ```
 
 ## Example use:
