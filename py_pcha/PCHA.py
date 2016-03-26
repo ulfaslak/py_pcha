@@ -146,7 +146,12 @@ def PCHA(X, noc, I=None, U=None, delta=0, verbose=False, conv_crit=1E-6, maxiter
     SST = np.sum(X[:, U] * X[:, U])
 
     # Initialize C
-    i = furthest_sum(X[:, I], noc, [int(np.ceil(len(I) * np.random.rand()))])
+    try:
+        i = furthest_sum(X[:, I], noc, [int(np.ceil(len(I) * np.random.rand()))])
+    except IndexError:
+        class InitializationException(Exception): pass
+        raise InitializationException("Initialization does not converge. Too few examples in dataset.")
+        
     j = range(noc)
     C = csr_matrix((np.ones(len(i)), (i, j)), shape=(len(I), noc)).todense()
 
