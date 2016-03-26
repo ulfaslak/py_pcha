@@ -135,9 +135,6 @@ def PCHA(X, noc, I=None, U=None, delta=0, verbose=False, conv_crit=1E-6, maxiter
 
         return C, SSE, muC, mualpha, CtXtXC, XC
 
-    # Convert to transpose
-    X = X.T
-
     N, M = X.shape
     
 
