@@ -5,6 +5,7 @@ setup(
     version='0.1',
     description='Python implemenation of PCHA algorithm',
     url='https://github.com/ulfaslak/py_pcha',
+    download_url = 'https://github.com/ulfaslak/py_pcha/tarball/0.1',
     author='Ulf Aslak',
     author_email='ulfjensen@gmail.com',
     license='MIT',
