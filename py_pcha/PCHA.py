@@ -9,8 +9,8 @@ import time
 from furthest_sum import furthest_sum
 
 
-def PCHA(X, noc, I=None, U=None, delta=0, verbose=False):
-    """Get archetypes from data.
+def PCHA(X, noc, I=None, U=None, delta=0, verbose=False, conv_crit=1E-6, maxiter=500):
+    """Return archetypes of dataset.
 
     Parameters
     ----------
@@ -135,9 +135,11 @@ def PCHA(X, noc, I=None, U=None, delta=0, verbose=False):
 
         return C, SSE, muC, mualpha, CtXtXC, XC
 
+    # Convert to transpose
+    X = X.T
+
     N, M = X.shape
-    conv_crit = 1E-6
-    maxiter = 500
+    
 
     if I is None:
         I = range(M)
