@@ -8,10 +8,6 @@ from numpy.matlib import repmat
 def furthest_sum(K, noc, i, exclude=[]):
     """Furthest sum algorithm, to efficiently generat initial seed/archetypes.
 
-    Note: Commonly data is formatted to have shape (examples, dimensions).
-    This function takes input and returns output of the transposed shape,
-    (dimensions, examples).
-    
     Parameters
     ----------
     K : numpy 2d-array

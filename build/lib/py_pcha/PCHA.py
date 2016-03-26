@@ -12,14 +12,10 @@ from furthest_sum import furthest_sum
 def PCHA(X, noc, I=None, U=None, delta=0, verbose=False, conv_crit=1E-6, maxiter=500):
     """Return archetypes of dataset.
 
-    Note: Commonly data is formatted to have shape (examples, dimensions).
-    This function takes input and returns output of the transposed shape,
-    (dimensions, examples).
-
     Parameters
     ----------
     X : numpy.2darray
-        Data matrix in which to find archetypes.
+        Data matrix in which to find archetypes
 
     noc : int
         Number of archetypes to find
@@ -155,7 +151,7 @@ def PCHA(X, noc, I=None, U=None, delta=0, verbose=False, conv_crit=1E-6, maxiter
     except IndexError:
         class InitializationException(Exception): pass
         raise InitializationException("Initialization does not converge. Too few examples in dataset.")
-
+        
     j = range(noc)
     C = csr_matrix((np.ones(len(i)), (i, j)), shape=(len(I), noc)).todense()
 
