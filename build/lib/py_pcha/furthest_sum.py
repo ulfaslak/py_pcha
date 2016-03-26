@@ -1,4 +1,8 @@
-"""FurthestSum algorithm to efficiently generate initial seeds/archetypes."""
+u"""Python implemtation of Morten Morups matlab code for PCHA.
+
+Translated to Python by Ulf Aslak Jensen
+Copyright (C) Morten Morup and Technical University of Denmark, 2010
+"""
 
 from __future__ import division
 import numpy as np
@@ -76,3 +80,14 @@ def furthest_sum(K, noc, i, exclude=[]):
             index[ind_t] = -1
 
     return i
+
+if __name__ == "__main__":
+    X=np.array(
+        [[0, 0, 1, 0.5, 4, 5, 2, 5, 3, 6, 2, 6, 3, 6, 8, 8, 6, 5, 3, 5, 3, 5, 2, 4, 5],
+         [0, 1, 0, 0.6, 5, 2, 6, 7, 2, 6, 1, 3, 4, 5, 6, 6, 4, 7, 8, 8, 6, 4, 4, 4, 2]]
+    )
+    noc = 3
+    N, M = X.shape
+    I = range(M)
+    U = range(M)
+    print PCHA(X, noc, [0])

@@ -1,4 +1,9 @@
-"""Principal Convex Hull Analysis (PCHA) / Archetypal Analysis."""
+# -*- coding: utf-8 -*-
+"""Python implemtation of Morten Morups matlab code for PCHA.
+
+Translated to Python by Ulf Aslak Jensen
+Copyright (C) Morten Morup and Technical University of Denmark, 2010
+"""
 
 from __future__ import division
 import numpy as np
