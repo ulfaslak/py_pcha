@@ -15,7 +15,7 @@ Python implementation by: Ulf Aslak Jensen.
 
 ## Example use:
 
-```
+```python
 import numpy as np
 from py_pcha.PCHA import PCHA
 
