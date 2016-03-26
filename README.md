@@ -15,7 +15,8 @@ Python implementation by: Ulf Aslak Jensen.
 
 ## Example use:
 
-```import numpy as np
+```
+import numpy as np
 from py_pcha.PCHA import PCHA
 
 dimensions = 15
@@ -40,7 +41,8 @@ print "   # Arc 1     # Arc 2     # Arc 3\n", XC
  [ 0.33147574  0.48692694  0.72084014]
  [ 0.2591176   0.81004636  0.34852488]
  [ 0.79427686  0.49692525  0.28712657]
- [ 0.39198509  0.50703908  0.67609915]]```
+ [ 0.39198509  0.50703908  0.67609915]]
+```
 	
 **Notice:** PCHA takes a 2D-array of shape (dimensions, examples). The same shape applies to any output from the function.
 Therefore, the archetypes contained in returned matrix `XC` will be the column vectors. 
