@@ -13,6 +13,14 @@ Matlab package also handles sparse- and kernel matrices.
 Matlab implementation by: Morten Mørup.
 Python implementation by: Ulf Aslak Jensen.
 
+## Install:
+
+```
+pip install py_pcha
+# or
+easy_install py_pcha
+```
+
 ## Example use:
 
 ```python
