@@ -9,4 +9,4 @@ Source paper: 'M. Morup and L. K. Hansen, Archetypal Analysis for Data Mining,
 Neural Computing 2011'.
 """
 
-__version__ = "0.0.2"
+__version__ = "0.1.1"
