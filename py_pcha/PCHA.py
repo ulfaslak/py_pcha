@@ -6,7 +6,7 @@ from scipy.sparse import csr_matrix
 from datetime import datetime as dt
 import time
 
-from furthest_sum import furthest_sum
+from .furthest_sum import furthest_sum
 
 
 def PCHA(X, noc, I=None, U=None, delta=0, verbose=False, conv_crit=1E-6, maxiter=500):
@@ -179,18 +179,18 @@ def PCHA(X, noc, I=None, U=None, delta=0, verbose=False, conv_crit=1E-6, maxiter
     varexpl = (SST - SSE) / SST
 
     if verbose:
-        print '\nPrincipal Convex Hull Analysis / Archetypal Analysis'
-        print 'A ' + str(noc) + ' component model will be fitted'
-        print 'To stop algorithm press control C\n'
+        print('\nPrincipal Convex Hull Analysis / Archetypal Analysis')
+        print('A ' + str(noc) + ' component model will be fitted')
+        print('To stop algorithm press control C\n')
 
     dheader = '%10s | %10s | %10s | %10s | %10s | %10s | %10s | %10s' % ('Iteration', 'Expl. var.', 'Cost func.', 'Delta SSEf.', 'muC', 'mualpha', 'muS', ' Time(s)   ')
     dline = '-----------+------------+------------+-------------+------------+------------+------------+------------+'
 
     while np.abs(dSSE) >= conv_crit * np.abs(SSE) and iter_ < maxiter and varexpl < 0.9999:
         if verbose and iter_ % 100 == 0:
-            print dline
-            print dheader
-            print dline
+            print(dline)
+            print(dheader)
+            print(dline)
         told = t1
         iter_ += 1
         SSE_old = SSE
@@ -214,14 +214,14 @@ def PCHA(X, noc, I=None, U=None, delta=0, verbose=False, conv_crit=1E-6, maxiter
             time.sleep(0.000001)
             varexpl = (SST - SSE) / SST
             if verbose:
-                print '%10.0f | %10.4f | %10.4e | %10.4e | %10.4e | %10.4e | %10.4e | %10.4f \n' % (iter_, varexpl, SSE, dSSE/np.abs(SSE), muC, mualpha, muS, (t1-told).seconds)
+                print('%10.0f | %10.4f | %10.4e | %10.4e | %10.4e | %10.4e | %10.4e | %10.4f \n' % (iter_, varexpl, SSE, dSSE/np.abs(SSE), muC, mualpha, muS, (t1-told).seconds))
 
     # Display final iteration
     varexpl = (SST - SSE) / SST
     if verbose:
-        print dline
-        print dline
-        print '%10.0f | %10.4f | %10.4e | %10.4e | %10.4e | %10.4e | %10.4e | %10.4f \n' % (iter_, varexpl, SSE, dSSE/np.abs(SSE), muC, mualpha, muS, (t1-told).seconds)
+        print(dline)
+        print(dline)
+        print('%10.0f | %10.4f | %10.4e | %10.4e | %10.4e | %10.4e | %10.4e | %10.4f \n' % (iter_, varexpl, SSE, dSSE/np.abs(SSE), muC, mualpha, muS, (t1-told).seconds))
 
     # Sort components according to importance
     ind, vals = zip(
