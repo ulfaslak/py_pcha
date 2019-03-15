@@ -11,7 +11,7 @@ All code contained in this package was originally written in Matlab. The Matlab 
 Matlab package also handles sparse- and kernel matrices. 
 
 Matlab implementation by: Morten Mørup.
-Python implementation by: Ulf Aslak Jensen.
+Python implementation by: Ulf Aslak.
 
 ## Install:
 Install with pip or easy_install
