@@ -10,8 +10,8 @@ aspects or **archetypes**."
 All code contained in this package was originally written in Matlab. The Matlab package is available [here][2].
 Matlab package also handles sparse- and kernel matrices. 
 
-Matlab implementation by: Morten Mørup.
-Python implementation by: Ulf Aslak.
+Matlab implementation by: Morten Mørup
+Python implementation by: Ulf Aslak
 
 ## Install:
 Install with pip or easy_install
@@ -25,7 +25,7 @@ $ easy_install py_pcha
 
 ```python
 import numpy as np
-from py_pcha.PCHA import PCHA
+from py_pcha import PCHA
 
 dimensions = 15
 examples = 100
@@ -51,7 +51,7 @@ print "   # Arc 1     # Arc 2     # Arc 3\n", XC
  [ 0.79427686  0.49692525  0.28712657]
  [ 0.39198509  0.50703908  0.67609915]]
 ```
-	
+
 **Notice:** PCHA takes a 2D-array of shape (dimensions, examples). The same shape applies to any output from the function.
 Therefore, the archetypes contained in returned matrix `XC` will be the column vectors. 
 
