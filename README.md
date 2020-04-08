@@ -10,8 +10,8 @@ aspects or **archetypes**."
 All code contained in this package was originally written in Matlab. The Matlab package is available [here][2].
 Matlab package also handles sparse- and kernel matrices. 
 
-Matlab implementation by: Morten Mørup<br>
-Python implementation by: Ulf Aslak
+*Matlab implementation by*: Morten Mørup<br>
+*Python implementation by*: Ulf Aslak
 
 ## Install:
 Install with pip or easy_install
