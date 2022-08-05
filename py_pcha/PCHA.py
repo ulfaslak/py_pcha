@@ -150,7 +150,7 @@ def PCHA(X, noc, I=None, U=None, delta=0, verbose=False, conv_crit=1E-6, maxiter
 
     # Initialize C
     try:
-        i = furthest_sum(X[:, I], noc, [np.random.choice(I)])
+        i = furthest_sum(X[:, I], noc, [np.random.choice(np.array(I))])
     except IndexError:
         class InitializationException(Exception): pass
         raise InitializationException("Initialization does not converge. Too few examples in dataset.")
